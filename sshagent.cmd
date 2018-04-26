@@ -53,7 +53,7 @@ GOTO :end
 :doAdds
  rem -- Grab all the *_rsa.* files in %USERPROFILE% and add them to the agent, this will probably
  rem -- prompt you for passwords to those keys.
- FOR /R %USERPROFILE%\.ssh\ %%A in (*_rsa.) DO %SSH_BIN_PATH%\ssh-add %%A >nul 2>&1
+ FOR /R %USERPROFILE%\.ssh\ %%A in (*_rsa) DO %SSH_BIN_PATH%\ssh-add %%A >nul 2>&1
  EXIT /b
 
 :agentexists
